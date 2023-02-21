@@ -33,7 +33,7 @@
             ?>
           </div>
         </div>
-        <hr style="border-top: 2px solid #ff5252;">
+        <hr style="border-top: 2px solid #f0f0f0;">
       </div>
     </div>
   </body>

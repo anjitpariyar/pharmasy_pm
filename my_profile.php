@@ -109,7 +109,7 @@
             <div id="admin_acknowledgement" class="col-md-12 h5 text-success font-weight-bold text-center" style="font-family: sans-serif;"></div>
           </div>
         </div>
-        <hr style="border-top: 2px solid #ff5252;">
+        <hr style="border-top: 2px solid #f0f0f0;">
       </div>
     </div>
   </body>

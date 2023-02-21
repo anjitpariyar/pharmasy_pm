@@ -7,7 +7,7 @@
 		<script src="bootstrap/js/jquery.min.js"></script>
 		<script src="bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="shortcut icon" href="images/icon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/index.js"></script>
     <script src="js/validateForm.js"></script>
@@ -35,7 +35,7 @@
         <div class="card-body">
           <form name="login-form" class="login-form" action="home.php" method="post" onsubmit="return validateCredentials();">
             <div class="logo">
-        			<img src="images/prof.jpg" class="profile"/>
+        			<img src="images/logo.png" class="profile"/>
         			<h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
         		</div> <!-- logo class -->
             <div class="input-group form-group">
@@ -67,7 +67,7 @@
         <div class="card-body">
           <div name="login-form" class="login-form">
             <div class="logo">
-              <img src="images/prof.jpg" class="profile"/>
+              <img src="images/logo.png" class="profile"/>
               <h1 class="logo-caption"><span class="tweak">F</span>orget <span class="tweak">P</span>assword</h1>
             </div> <!-- logo class -->
 

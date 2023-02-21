@@ -24,7 +24,7 @@
         </ul>
       </div>
     </section>
-    <hr style="border-top: 2px solid #ff5252;">
+    <hr style="border-top: 2px solid #f0f0f0;">
     ';
   }
 ?>

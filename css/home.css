@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   height: 100vh;
 }
 
@@ -23,7 +24,7 @@ html, body {
   max-height: 50px;
   font-size: 36px;
   background-color: #ffffff;
-  color: #ff5252;
+  /* color: #ff5252; */
   border: none;
   outline: none;
 }
@@ -34,8 +35,12 @@ html, body {
 }
 
 @keyframes rotate_wheel {
-  0%    { transform: rotate(0deg); }
-  100%  { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .user_options button:focus {
@@ -51,7 +56,7 @@ html, body {
 .user_options .options {
   position: fixed;
   right: 1%;
-  top : 12%;
+  top: 12%;
   background-color: #111111;
   border-radius: 10px;
   z-index: 1;
@@ -83,10 +88,12 @@ html, body {
   margin: 2%;
   padding: 15px;
   border-radius: 5px;
-  border: 1px solid #02b6ff;
+  border: 1px solid transparent;
   cursor: pointer;
 }
-
+.dashboard-stats:hover {
+  border-color: #22b573;
+}
 .todays-report {
   margin: 2% 0;
   padding: 5%;
@@ -94,11 +101,13 @@ html, body {
   border: 1px solid #ff5252;
 }
 
-#add_new_customer_model, #add_new_supplier_model, #add_new_medicine_model {
+#add_new_customer_model,
+#add_new_supplier_model,
+#add_new_medicine_model {
   display: none;
   position: fixed;
   z-index: 999;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0, 0, 0, 0.4);
   width: 100vw;
   height: 100vh;
 }
@@ -118,7 +127,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
@@ -140,4 +149,8 @@ input[type=number] {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+.success-icon {
+  color: #22b573;
 }
