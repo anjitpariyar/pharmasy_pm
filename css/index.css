@@ -31,6 +31,8 @@ body {
 .logo .profile {
   margin-left: 50%;
   transform: translate(-50%);
+  height: 110px;
+  width: auto;
 }
 
 .logo .tweak {
