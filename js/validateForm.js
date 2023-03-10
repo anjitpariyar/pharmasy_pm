@@ -112,6 +112,8 @@ function addCustomer() {
   var contact_number = document.getElementById("customer_contact_number");
   var customer_address = document.getElementById("customer_address");
   var doctor_name = document.getElementById("customer_doctors_name");
+  var doc__form = document.getElementById("customer_name");
+
   // var doctor_address = document.getElementById("customer_doctors_address");
   if (!validateName(customer_name.value, "name_error")) customer_name.focus();
   else if (!validateContactNumber(contact_number.value, "contact_number_error"))
@@ -126,9 +128,9 @@ function addCustomer() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function () {
       if ((xhttp.readyState = 4 && xhttp.status == 200))
-        console.log("xhttp.responseText", xhttp.responseText);
-      document.getElementById("customer_acknowledgement").innerHTML =
-        xhttp.responseText;
+        // console.log("xhttp.responseText", xhttp.responseText);
+        document.getElementById("customer_acknowledgement").innerHTML =
+          xhttp.responseText;
     };
     xhttp.open(
       "GET",
