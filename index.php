@@ -18,7 +18,7 @@
           <form name="login-form" class="login-form" action="home.php" method="post" onsubmit="return validateCredentials();">
             <div class="logo">
         			<img src="images/logo.png" class="profile"/>
-        			<h1 class="logo-caption"><span class="tweak">L</span>ogin</h1>
+        			<h1 class="logo-caption"><span class="tweak">L</span>ogindsdsds</h1>
         		</div> <!-- logo class -->
             <div class="input-group form-group">
               <div class="input-group-prepend">
@@ -30,7 +30,7 @@
               <div class="input-group-prepend">
                 <span class="input-group-text"><i class="fas fa-key text-white"></i></span>
               </div>
-              <input name="password" type="password" class="form-control" placeholder="password" onkeyup="validate();" required>
+              <input name="password" type="text" class="form-control" placeholder="password" onkeyup="validate();" required>
             </div> <!-- input-group class -->
             <div class="form-group">
               <button class="btn btn-default btn-block btn-custom">Login</button>

@@ -160,23 +160,28 @@
               <th>Total</th>
             </tr>
           </thead>
+          <!-- medicines_stock, name, expdate, qty, mrp -->
+          <!-- invoice dis, total -->
           <tbody>
             <?php
               $seq_no = 0;
               $total = 0;
-              $query = "SELECT * FROM sales WHERE INVOICE_NUMBER = $invoice_number";
+              $query = "SELECT *
+              FROM invoices
+              JOIN medicines_stock ON invoices.INVOICE_ID = medicines_stock.ID
+              WHERE invoices.INVOICE_ID = $invoice_number AND medicines_stock.ID = $invoice_number" ;
               $result = mysqli_query($con, $query);
               while($row = mysqli_fetch_array($result)) {
                 $seq_no++;
                 ?>
                 <tr>
                   <td><?php echo $seq_no; ?></td>
-                  <td><?php echo $row['MEDICINE_NAME']; ?></td>
+                  <td><?php echo $row['NAME']; ?></td>
                   <td><?php echo $row['EXPIRY_DATE']; ?></td>
                   <td><?php echo $row['QUANTITY']; ?></td>
                   <td><?php echo $row['MRP']; ?></td>
-                  <td><?php echo $row['DISCOUNT']."%"; ?></td>
-                  <td><?php echo $row['TOTAL']; ?></td>
+                  <td><?php echo $row['TOTAL_DISCOUNT']."%"; ?></td>
+                  <td><?php echo $row['TOTAL_AMOUNT']; ?></td>
                 </tr>
                 <?php
               }
