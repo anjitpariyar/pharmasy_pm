@@ -65,11 +65,17 @@
         $new_quantity = $row['QUANTITY'] + $quantity;
         $query = "UPDATE medicines_stock SET QUANTITY = $new_quantity WHERE UPPER(NAME) = '".strtoupper($name)."' AND UPPER(BATCH_ID) = '$batch_id'";
         $result = mysqli_query($con, $query);
+        echo "Stock update successfully!";
+      
       }
       else {
-        $query = "INSERT INTO medicines_stock (NAME, BATCH_ID, EXPIRY_DATE, QUANTITY, MRP, RATE, INVOICE_NUMBER) VALUES('$name', '$batch_id', '$expiry_date', $quantity, $mrp, $rate, $invoice_number)";
+        $query = "INSERT INTO medicines_stock (NAME, BATCH_ID, EXPIRY_DATE, QUANTITY, MRP, RATE) VALUES('$name', '$batch_id', '$expiry_date', $quantity, $mrp, $rate)";
         $result = mysqli_query($con, $query);
+        echo "Stock added successfully!";
+
       }
+      echo "none successfully!";
+
     }
   }
 
