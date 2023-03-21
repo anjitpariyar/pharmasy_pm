@@ -30,6 +30,7 @@
 
     if(isset($_GET["action"]) && $_GET["action"] == "search")
       searchMedicineStock(strtoupper($_GET["text"]), $_GET["tag"]);
+      
   }
 
   function showMedicinesStock($id) {
@@ -126,10 +127,11 @@ function updateMedicineStock($id, $batch_id, $expiry_date, $quantity, $mrp, $rat
 
 function searchMedicineStock($text, $column) {
   require "db_connection.php";
+
   if($con) {
     $seq_no = 0;
 
-    if($column == "EXPIRY_DATE")
+    if($column == "EXPIRY_DATE" || $column == "EXPIRY_DATE_TO_BE")
       $query = "SELECT * FROM medicines INNER JOIN medicines_stock ON medicines.NAME = medicines_stock.NAME";
     else if($column == 'QUANTITY')
       $query = "SELECT * FROM medicines INNER JOIN medicines_stock ON medicines.NAME = medicines_stock.NAME WHERE medicines_stock.$column = 0";
@@ -144,7 +146,18 @@ function searchMedicineStock($text, $column) {
         if(substr($expiry_date, 3) < date('y'))
           showMedicineStockRow($seq_no, $row);
         else if(substr($expiry_date, 3) == date('y')) {
-          if(substr($expiry_date, 0, 2) < date('m'))
+          if(substr($expiry_date, 0, 2) <= (date('m')  ))
+            showMedicineStockRow($seq_no, $row);
+        }
+      }
+    }
+    else if($column == 'EXPIRY_DATE_TO_BE'){
+      while($row = mysqli_fetch_array($result)) {
+        $expiry_date = $row['EXPIRY_DATE'];
+        if(substr($expiry_date, 3) < date('y'))
+          showMedicineStockRow($seq_no, $row);
+        else if(substr($expiry_date, 3) == date('y')) {
+          if(substr($expiry_date, 0, 2) > date('m'  ) && substr($expiry_date, 0, 2) <= date('m', strtotime("+2 month") ))
             showMedicineStockRow($seq_no, $row);
         }
       }

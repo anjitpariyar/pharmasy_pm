@@ -43,6 +43,17 @@ function validateContactNumber(contact_number, error) {
   return true;
 }
 
+function validateEmail(email, error) {
+  var result = document.getElementById(error);
+  result.style.display = "block";
+  const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (!regex.test(email)) {
+    result.innerHTML = "Must valid email";
+    return false;
+  } else result.style.display = "none";
+  return true;
+}
+
 function validateAddress(address, error) {
   var result = document.getElementById(error);
   result.style.display = "block";
