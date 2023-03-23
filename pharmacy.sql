@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 22, 2023 at 04:44 PM
+-- Generation Time: Mar 23, 2023 at 05:11 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -64,12 +64,12 @@ CREATE TABLE `customers` (
 --
 
 INSERT INTO `customers` (`ID`, `NAME`, `CONTACT_NUMBER`, `ADDRESS`, `DOCTOR_NAME`, `DOCTOR_ADDRESS`) VALUES
-(4, 'Kiran Suthar', '1234567690', 'Andheri East', 'Anshari', 'Andheri East'),
-(6, 'Aditya', '7365687269', 'Virar West', 'Xyz', 'Virar West'),
-(11, 'Shivam Tiwari', '6862369896', 'Dadar West', 'Dr Kapoor', 'Dadar East'),
-(13, 'Varsha Suthar', '7622369694', 'Rani Station', 'Dr Ramesh', 'Rani Station'),
+(4, 'Kiran Sutharr', '1234567690', 'Kathmandu  Putalisadak', 'Anshari Thapaa', 'Andheri East'),
+(6, 'Aditya', '7365687269', 'Jamal Kathmandu', 'Anuvab', 'Virar West'),
+(11, 'Shivam Tiwari', '6862369896', 'Kumaripati Lalitpur', 'Dr Kapoor', 'Dadar East'),
+(13, 'Varsha Suthar', '7622369694', 'Bhaktapur Panipokhari', 'Dr Ramesh', 'Rani Station'),
 (14, 'Prakash Bhattarai', '9802851472', 'Pokhara-16, Dhikidada', 'Hari Bahadur', 'Matepani-12'),
-(15, 'Sdasda', '1234567890', 'Asdsdasdsadsda,sdddas', 'Dasdasdsdas', 'Dsasaddasdasdassdsdsdddasd,dsasdds');
+(16, 'Parkash', '9825112343', 'Darhahra, Kathmandu', 'Monica', '');
 
 -- --------------------------------------------------------
 
@@ -112,20 +112,15 @@ CREATE TABLE `medicines` (
 --
 
 INSERT INTO `medicines` (`ID`, `NAME`, `PACKING`, `GENERIC_NAME`, `SUPPLIER_NAME`) VALUES
-(2, 'Crosin', '10tab', 'Hdsgvkvajkcbja', 'Kiran Pharma'),
 (4, 'Dolo 650', '15tab', 'paracetamole', 'BDPL PHARMA'),
 (5, 'Gelusil', '10tab', 'mint fla', 'Desai Pharma'),
 (6, 'Broi', 'BRO', 'Brooo', 'BDPL PHARMA'),
 (7, 'Brooo', 'SDAS', 'Broooo', 'Fndnbrwh'),
-(8, 'Chanda', '12 TABS', 'Fafafa', 'Chanda Supplier'),
 (9, 'Chanda', '2123', 'Gg', 'Chanda Supplier'),
-(10, 'Chadani', '11', 'Gg', 'Chanda Supplier'),
-(11, 'Chanda', '12', 'Fff', 'Chanda Supplier'),
-(12, 'Chanda', '1212', 'Dsd', 'Chanda Supplier'),
-(13, 'Chanda 2', '1212', 'Gg', 'Chanda Supplier'),
 (14, 'Chanda 2', '121', 'Sdsad', 'Chanda Supplier'),
 (15, 'Chanda 3', '121', 'Dfd', 'Chanda Supplier'),
-(16, 'Chanda 4', '124', 'Fdf', 'Chanda Supplier');
+(16, 'Chanda 4', '124', 'Fdf', 'Chanda Supplier'),
+(17, 'Crosin', '10 TAB', 'Head Ache', 'Chanda Supplier');
 
 -- --------------------------------------------------------
 
@@ -148,7 +143,7 @@ CREATE TABLE `medicines_stock` (
 --
 
 INSERT INTO `medicines_stock` (`ID`, `NAME`, `BATCH_ID`, `EXPIRY_DATE`, `QUANTITY`, `MRP`, `RATE`) VALUES
-(1, 'Crosin', 'CROS12', '12/34', 0, 2626, 26),
+(1, 'Crosin', 'CROS13', '02/23', 100, 2626, 26),
 (2, 'Gelusil', 'G327', '12/42', 0, 15, 12),
 (3, 'Dolo 650', 'DOLO327', '01/24', 1, 30, 24),
 (4, 'Nicip Plus', 'NI325', '05/23', 3, 32.65, 28),
@@ -184,7 +179,8 @@ INSERT INTO `purchases` (`SUPPLIER_NAME`, `INVOICE_NUMBER`, `VOUCHER_NUMBER`, `P
 ('Chanda Supplier', 1111, 4, '2023-03-14', 9, 'PAID'),
 ('Chanda Supplier', 1116, 5, '2023-03-14', 99, 'PAID'),
 ('Chanda Supplier', 12121, 6, '2023-03-14', 72, 'PAID'),
-('Chanda Supplier', 1212, 7, '2023-03-14', 733, 'PAID');
+('Chanda Supplier', 1212, 7, '2023-03-14', 733, 'PAID'),
+('Chanda Supplier', 12123, 8, '2023-03-15', 400, 'DUE');
 
 -- --------------------------------------------------------
 
@@ -278,7 +274,7 @@ ALTER TABLE `suppliers`
 -- AUTO_INCREMENT for table `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `invoices`
@@ -290,7 +286,7 @@ ALTER TABLE `invoices`
 -- AUTO_INCREMENT for table `medicines`
 --
 ALTER TABLE `medicines`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `medicines_stock`
@@ -302,7 +298,7 @@ ALTER TABLE `medicines_stock`
 -- AUTO_INCREMENT for table `purchases`
 --
 ALTER TABLE `purchases`
-  MODIFY `VOUCHER_NUMBER` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `VOUCHER_NUMBER` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `suppliers`
