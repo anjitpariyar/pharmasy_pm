@@ -16,7 +16,7 @@
             <a href="my_profile.php"><i class="fa fa-user"></i><span>My Profile</span></a>
           </li>
           <li>
-            <a href="change_password.php"><i class="fa fa-edit"></i><span>Change Password</span></a>
+            <a href="change_password.php"><i class="fas fa-save"></i><span>Change Password</span></a>
           </li>
           <li>
             <a href="logout.php"><i class="fa fa-key"></i><span>Logout</span></a>

@@ -106,8 +106,8 @@ function showEditOptionsRow($seq_no, $row) {
       <code class="text-danger small font-weight-bold float-right" id="rate_error" style="display: none;"></code>
     </td>
     <td>
-      <button href="" class="btn btn-success btn-sm" onclick="updateMedicineStock(<?php echo $row[5]; ?>);">
-        <i class="fa fa-edit"></i>
+      <button href="" class="btn btn-success btn-sm" onclick="updateMedicineStock(<?php echo $row[5]; ?>);" title="save">
+      <i class="fas fa-save"></i>
       </button>
       <button class="btn btn-danger btn-sm" onclick="cancel();">
         <i class="fa fa-close"></i>

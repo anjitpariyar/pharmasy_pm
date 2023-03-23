@@ -96,7 +96,7 @@ function showEditOptionsRow($seq_no, $row) {
     </td> -->
     <td>
       <button href="" class="btn btn-success btn-sm" onclick="updateCustomer(<?php echo $row['ID']; ?>);">
-        <i class="fa fa-edit"></i>
+        <i class="fas fa-save"></i>
       </button>
       <button class="btn btn-danger btn-sm" onclick="cancel();">
         <i class="fa fa-close"></i>

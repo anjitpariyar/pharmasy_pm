@@ -100,7 +100,7 @@ function showEditOptionsRow($seq_no, $row) {
     </td>
     <td>
       <button href="" class="btn btn-success btn-sm" onclick="updatePurchase(<?php echo $row['VOUCHER_NUMBER']; ?>);">
-        <i class="fa fa-edit"></i>
+        <i class="fas fa-save"></i>
       </button>
       <button class="btn btn-danger btn-sm" onclick="cancel();">
         <i class="fa fa-close"></i>

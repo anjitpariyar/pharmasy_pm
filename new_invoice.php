@@ -68,7 +68,6 @@
               <label class="font-weight-bold" for="">Payment Type :</label>
               <select id="payment_type" class="form-control">
               	<option value="1">Cash Payment</option>
-              	<option value="2">Card Payment</option>
                 <option value="3">Net Banking</option>
               </select>
             </div>

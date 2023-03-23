@@ -75,7 +75,7 @@
               <label class="font-weight-bold" for="paytype">Payment Type :</label>
               <select id="payment_type" name="paytype" class="form-control">
               	<option value="Cash Payment">Cash Payment</option>
-                <option value="Net Banking">Net Banking</option>
+                <!-- <option value="Net Banking">Net Banking</option> -->
                 <option value="Payment Due">Payment Due</option>
               </select>
             </div>
